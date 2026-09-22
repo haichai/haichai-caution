@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xác nhận độ tuổi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .fade-in {
+      animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.96) translateY(8px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#454545] flex items-center justify-center p-4 selection:bg-red-500 selection:text-white">
+
+  <div class="relative w-full max-w-[420px] bg-white rounded-[24px] shadow-2xl overflow-hidden fade-in">
+    
+    <!-- State 1: Verification Form -->
+    <div id="verification-card" class="transition-all duration-300">
+      <!-- Gradient Header Section -->
+      <div class="relative bg-gradient-to-b from-[#ba2025] to-[#70090d] text-white px-6 pt-7 pb-6 text-center shadow-inner">
+        <!-- 18+ Top Badge -->
+        <div class="mx-auto w-[68px] h-[68px] rounded-full bg-white flex items-center justify-center shadow-lg border-[3.5px] border-[#ea383e] mb-3.5">
+          <span class="text-[#202020] font-black text-2xl tracking-tighter flex items-center justify-center">
+            18<span class="text-xl font-black -ml-0.5 mb-1 text-[#ea383e]">+</span>
+          </span>
+        </div>
+
+        <h1 class="text-[21px] font-bold tracking-tight mb-1 text-white">
+          Bạn đã đủ 18 tuổi?
+        </h1>
+        <p class="text-xs sm:text-sm text-red-100 font-normal opacity-95">
+          Danh mục này dành cho người trưởng thành
+        </p>
+      </div>
+
+      <div class="p-5 sm:p-6 space-y-5 bg-white">
+        <!-- Guidelines box -->
+        <div class="bg-[#f8fafc] border border-[#f1f5f9] rounded-2xl p-4 space-y-3 shadow-xs">
+          <!-- Item 1 -->
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#ef4444] text-white flex items-center justify-center">
+              <svg class="w-3 h-3 stroke-[2.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <p class="text-[13px] text-gray-700 leading-snug font-medium">
+              Sản phẩm không dành cho người dưới 18 tuổi và phụ nữ có thai
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#ef4444] text-white flex items-center justify-center">
+              <svg class="w-3 h-3 stroke-[2.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </div>
+            <p class="text-[13px] text-gray-700 leading-snug font-medium">
+              Không lái xe khi đã sử dụng rượu bia
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-5 sm:gap-6 py-1">
+          <!-- Icon 1: 18+ Prohibited -->
+          <div class="w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center">
+            <img 
+              src="https://png.pngtree.com/png-clipart/20241110/original/pngtree-under-18-years-prohibition-sign-icon-vector-illustration-png-image_16860799.png" 
+              alt="Cấm người dưới 18 tuổi" 
+              referrerpolicy="no-referrer"
+              class="w-full h-full object-contain"
+            />
+          </div>
+
+          <!-- Icon 2: No Drunk Driving -->
+          <div class="w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center">
+            <img 
+              src="https://png.pngtree.com/png-vector/20251015/ourmid/pngtree-do-not-drink-and-drive-sign-vector-png-image_17716696.webp" 
+              alt="Không lái xe khi đã sử dụng rượu bia" 
+              referrerpolicy="no-referrer"
+              class="w-full h-full object-contain"
+            />
+          </div>
+
+          <!-- Icon 3: No Drinking while Pregnant (giảm 10% kích thước với scale-90) -->
+          <div class="w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center">
+            <img 
+              src="https://png.pngtree.com/png-vector/20220928/ourmid/pngtree-no-alcohol-for-pregnant-women-women-illustration-symbol-vector-png-image_20007138.png" 
+              alt="Cấm phụ nữ có thai sử dụng rượu bia" 
+              referrerpolicy="no-referrer"
+              class="w-full h-full object-contain transform scale-90"
+            />
+          </div>
+        </div>
+
+        <!-- Prompt Message -->
+        <p class="text-center text-[13px] font-semibold text-[#dc2626] leading-relaxed">
+          Vui lòng xác nhận bạn đã đủ 18 tuổi để tiếp tục
+        </p>
+
+        <div class="grid grid-cols-2 gap-3 pt-1">
+          <!-- Button Over 18 -->
+          <button 
+            id="btn-confirm-age"
+            type="button" 
+            class="w-full py-3.5 px-4 bg-[#0a3a40] hover:bg-[#072a2e] active:scale-[0.98] text-white font-semibold text-sm rounded-xl transition duration-150 flex items-center justify-center shadow-md">
+            Trên 18 tuổi
+          </button>
+
+          <!-- Button Under 18 -->
+          <button 
+            id="btn-reject-age"
+            type="button" 
+            class="w-full py-3.5 px-4 bg-[#eceff1] hover:bg-[#dfe4e7] active:scale-[0.98] text-[#334155] font-semibold text-sm rounded-xl transition duration-150 flex items-center justify-center">
+            Dưới 18 tuổi
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="denied-card" class="hidden p-8 text-center bg-white fade-in">
+      <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+        </svg>
+      </div>
+
+      <h2 class="text-xl font-bold text-gray-900 mb-2">
+        Truy cập bị từ chối
+      </h2>
+
+      <p class="text-gray-600 text-sm leading-relaxed mb-6">
+        Quyền truy cập của bạn bị hạn chế do độ tuổi.
+      </p>
+
+      <button 
+        id="btn-back" 
+        type="button"
+        class="w-full py-3 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium text-sm rounded-xl transition duration-150">
+        Thử xác nhận lại
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+      const TARGET_URL = 'https://order.ipos.vn/?pos_parent=QWOKAG5JPPOW';
+      
+      const verificationCard = document.getElementById('verification-card');
+      const deniedCard = document.getElementById('denied-card');
+      const btnConfirmAge = document.getElementById('btn-confirm-age');
+      const btnRejectAge = document.getElementById('btn-reject-age');
+      const btnBack = document.getElementById('btn-back');
+
+      // Click "Trên 18 tuổi" -> Chuyển hướng tới trang đặt hàng
+      btnConfirmAge.addEventListener('click', function () {
+        btnConfirmAge.innerHTML = `
+          <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+          </svg>
+          Đang chuyển hướng...
+        `;
+        btnConfirmAge.disabled = true;
+        window.location.href = TARGET_URL;
+      });
+
+      // Click "Dưới 18 tuổi" -> Hiển thị màn hình từ chối
+      btnRejectAge.addEventListener('click', function () {
+        verificationCard.classList.add('hidden');
+        deniedCard.classList.remove('hidden');
+      });
+
+      // Click "Thử xác nhận lại" -> Cho phép quay lại màn hình xác nhận
+      btnBack.addEventListener('click', function () {
+        deniedCard.classList.add('hidden');
+        verificationCard.classList.remove('hidden');
+      });
+    })();
+  </script>
+</body>
+</html>
